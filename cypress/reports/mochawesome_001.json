@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-11T15:28:25.847Z",
+    "end": "2023-07-11T15:30:01.811Z",
+    "duration": 95964,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e484e7c3-d6a2-4627-9d36-a2781665b07b",
+      "title": "",
+      "fullFile": "cypress/integration/checkout.ts",
+      "file": "cypress/integration/checkout.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3d7acc3b-6caf-4c9c-8230-1371a2e88387",
+          "title": "The user checkout product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "The user fills out the information as a delivery destination with correct and valid inputs",
+              "fullTitle": "The user checkout product The user fills out the information as a delivery destination with correct and valid inputs",
+              "timedOut": null,
+              "duration": 42964,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\ndashboardPage.addSaucelabBackpack();\ndashboardPage.clickKeranjang();\ncartPage.klikCheckout();\ncheckoutStepPage.information('Diana', 'Sari', '80351');\ncheckoutStepPage.klikContinue();\ncheckoutStepPage.checkoutStepTwo();\ncheckoutStepPage.klikFinish();",
+              "err": {},
+              "uuid": "b5c84d87-6d1c-47b8-a0a7-4dc9540b6176",
+              "parentUUID": "3d7acc3b-6caf-4c9c-8230-1371a2e88387",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "The user fills out the information as a delivery destination without fills out the first name column",
+              "fullTitle": "The user checkout product The user fills out the information as a delivery destination without fills out the first name column",
+              "timedOut": null,
+              "duration": 35737,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\ndashboardPage.addSaucelabBackpack();\ndashboardPage.clickKeranjang();\ncartPage.klikCheckout();\ncheckoutStepPage.withoutFirstname('Sari', '80351');\ncheckoutStepPage.klikContinue();\ncheckoutStepPage.firstNameAlert();",
+              "err": {},
+              "uuid": "190a6a9b-45c6-4ede-b206-ded3e043933a",
+              "parentUUID": "3d7acc3b-6caf-4c9c-8230-1371a2e88387",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b5c84d87-6d1c-47b8-a0a7-4dc9540b6176",
+            "190a6a9b-45c6-4ede-b206-ded3e043933a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 78701,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
